@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<constant name="struts.multipart.maxSize" value="100000000"/> 
+	<constant name="struts.multipart.saveDir" value="/tmp"/>
+	<constant name="struts.devMode" value="true" />	
+	<package name="struts2"  extends="struts-default">
+		<action name="login" class="com.cslg.OfficeControl.Action.LoginCheckAction">
+			<result name="success">user/index.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+		<action name="logout" class="com.cslg.OfficeControl.Action.LogoutAction">
+			<result name="success" type="redirect">/index.jsp</result>
+		</action>
+		<action name="*User" class="com.cslg.OfficeControl.Action.UserAction" method="{1}">
+			<result name="updateResult">information.jsp</result>
+			<result name="showAll">allUser.jsp</result>
+			<result name="showSaveUser">saveUser.jsp</result>
+			<!-- 管理员修改一个用户后返回用户列表界面 -->
+			<result name="saveResult" type="chain">
+				<param name="actionName">showAllUser</param>
+        		<param name="namespace">/</param>
+			</result>
+			<!-- 管理员删除一个用户后返回用户列表界面 -->
+			<result name="delteSuccess" type="chain">
+				<param name="actionName">showAllUser</param>
+        		<param name="namespace">/</param>
+			</result>
+			<!-- 管理员添加一个用户后返回用户列表界面 -->
+			<result name="addSuccess" type="chain">
+				<param name="actionName">showAllUser</param>
+        		<param name="namespace">/</param>
+			</result>
+		</action>
+		
+		<action name="*Gather" class="com.cslg.OfficeControl.Action.GatherAction" method="{1}">
+			<result name="showUserSuccess">allGather.jsp</result>
+			<result name="showAllSuccess">allGather.jsp</result>
+			<!-- 管理员删除一个设备后返回数据列表 -->
+			<result name="deleteGatherSuccess" type="chain">
+				<param name="actionName">showAllGather</param>
+        		<param name="namespace">/</param>
+			</result>
+			<result name="showAddGatherSuccess">addGather.jsp</result>
+			<!-- 管理员添加一个设备后返回数据列表 -->
+			<result name="addSuccess" type="chain">
+				<param name="actionName">showAllGather</param>
+        		<param name="namespace">/</param>
+			</result>
+			<!-- 管理员修改一个设备后返回数据列表 -->
+			<result name="editGatherSuccess" type="chain">
+				<param name="actionName">showAllGather</param>
+        		<param name="namespace">/</param>
+			</result>
+		</action>
+		
+		<action name="*Controller" class="com.cslg.OfficeControl.Action.ControllerAction" method="{1}">
+			<result name="showUserSuccess">allController.jsp</result>
+			<result name="showAllSuccess">allController.jsp</result>
+			<!-- 管理员删除一个设备后返回数据列表 -->
+			<result name="deleteControllerSuccess" type="chain">
+				<param name="actionName">showAllController</param>
+        		<param name="namespace">/</param>
+			</result>
+			<result name="showAddControllerSuccess">addController.jsp</result>
+			<!-- 管理员添加一个设备后返回数据列表 -->
+			<result name="addSuccess" type="chain">
+				<param name="actionName">showAllController</param>
+        		<param name="namespace">/</param>
+			</result>
+			<!-- 管理员修改一个设备后返回数据列表 -->
+			<result name="editControllerSuccess" type="chain">
+				<param name="actionName">showAllController</param>
+        		<param name="namespace">/</param>
+			</result>
+			<!-- 管理员修改一个设备的数据后返回数据列表 -->
+			<result name="updateControllerSuccess" type="chain">
+				<param name="actionName">showAllController</param>
+        		<param name="namespace">/</param>
+			</result>
+		</action>
+	</package>
+</struts>   

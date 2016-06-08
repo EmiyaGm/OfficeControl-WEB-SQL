@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0px; padding:0px;border:0px;outline:0px;}
+.clear{clear: both;margin:0px;padding:0px;height:0px; width:0px;}
+html{background-image: url(../img/bg.jpg);background-repeat:no-repeat 0 0 no-repeat scroll transparent;
+	background-size:100%;}
+body{font-family:Tahoma,"宋体";font-size:12px;color:#474747;width:960px;margin:0px auto;padding-top:80px;}
+
+#title{width:100%;float:left;}
+#clogo{float:left; margin-top:20px; margin-left:50px;width:600px;}
+#slogo{float:right;width:220px;}
+
+#content{width:100%;float:left;margin-top:30px;}
+
+#links{width:450px;float:left;}
+.pic{float:left; width:138px;margin-right:12px;margin-bottom:12px;}
+#pic2{width:288px;}
+#links2{float:left;width:150px;}
+
+#rmessage{float:left;width:320px;height:510px;}
+
+#MDCcurrencyFocus_2{border:10px solid #D9532D;width: 300px; height: 230px; overflow: hidden;text-align: center;}
+#MDCcurrencyFocus_2 img{width: 100%; height: 210px; opacity: 1;}
+
+#bgwhite{margin-top:12px;border:10px solid white;background-color: white;}
+#inform{ width:300px;height:230px;border:1px solid #ccc;background:url(../img/bg_1.jpg) no-repeat left bottom; }
+#tline{width:299px; height:29px;background:url(../img/t5.jpg) no-repeat;line-height:29px; font-size:12px;font-weight:bold;}
+#tt{float:left; padding-left:25px;}
+#tm{float:right;padding-right:15px;font-size:10px;}
+#inform ul{float:left; width:290px; padding-left:5px; padding-bottom:10px; padding-right:5px; padding-top:10px}
+#inform li{display:inline; width:290px;height:25px; float:left;line-height:25px; border-bottom:dashed #A2A2A2 1px;background:url(../img/icon.gif) no-repeat 5px 10px;  text-align:left; font-size:10px;}
+#inform li a{ overflow:hidden;  width:72%;float:left; padding-left:10px;text-align:left;font-size:12px;  white-space:nowrap;text-overflow:ellipsis;   }
+a{color:#474747;text-decoration:none;}
+a:hover {color:#ff0000;text-decoration:underline;}
+
+#footer{width:100%;text-align: center;margin-top:12px;}
+#school{width:360px;}

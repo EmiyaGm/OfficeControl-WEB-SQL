@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+/*陈祥*/
+body,html{
+	background-color:#2E5E79;
+	margin-top:25px;
+	width:99.66%;
+	height:95.25%;
+}
+#package{
+	width:100%;
+	min-height:100%;
+	background-color:white;
+	margin-top:5px;
+}
+#hel{
+	width:99%;
+	background-color:white;
+}
+#title{
+	font-family:Microsoft YaHei,Verdana,Arial,SimSun;color:#666;font-size:14px;
+	width:98%;height:38px;position:fixed;top:6px;left:0;
+	background-color:white;
+	border-bottom:1px solid #B3CBD6;
+	padding-top:6px;
+	padding-left:15px;
+	font-size:20px;
+	line-height:30px;
+}
+
+
+#right{
+	float:right;
+}
+#right a{
+	width:230px;
+	height:30px;
+	line-height:30px;
+	padding:3px 10px;
+	text-align:center;
+}
+
+
+/*分页操作样式*/
+
+#operation input{
+	width:35px;
+	border:1px solid #e3e3e3;
+}

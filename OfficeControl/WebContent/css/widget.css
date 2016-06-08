@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+/*陈祥*/
+*{
+	padding:0;
+	margin:0;
+	border:0;
+	font-size:12px;
+	font-family:"Adobe 宋体 Std R", "Adobe 楷体 Std L";
+}
+
+/*列表*/
+ul{
+	list-style:none;
+	width:100%;
+}
+ul li{
+	float:left;
+}
+
+/*链接按照这种顺序设置*/
+a:focus{
+   outline: none;//取消点击链接出现虚线的边框
+}
+a{ 
+	text-decoration:none;
+	display:block;
+	padding:2px 0;
+	line-height:15px;
+	height:15px;
+} 
+a:visited {
+	text-decoration:none;
+} 
+
+
+/*表格直接显示信息的那种,第一列左对齐，其他列居中,不需要设置，直接导入文件就行了*/
+.tab{
+	border-collapse:collapse;	
+	width:96%;
+	margin:20px auto;
+}
+.tab tr{
+	border-bottom:1px solid #e3e3e3;
+	height:40px;
+}
+.tab th{
+	background-color:#8F8F8F;
+	color:white;
+}
+.tab th:first-child,table tr td:first-child{
+	text-align:left;
+	padding-left:8px;
+}
+.tab tr td,table th{
+	text-align:center;
+}
+.tab tr td{
+	padding:0 5px;
+}
+
+
+.tab tr:hover,table tr.hilite
+{
+    background-color:#F6F6F6;
+}
+
+
+/*输入数据型表格*/
+table{
+	width:60%;
+	border-collapse:collapse;
+	margin:20px auto;
+}
+table tr{
+	height:30px;
+	border-bottom:0;
+}
+
+/*文字*/
+
+
+/*输入框,按钮,选择框去掉光晕*/
+input,btn,select{
+	outline:none;
+}
+
+
+/*按钮 class设为btn*/
+
+.btn,
+.btn:visited{ 
+	background-color:#f4f4f4;
+	color:#000;
+	min-width:60px;
+	height:25px;
+	font-size:14px;
+	border-right: #000000 1px solid;
+    border-top: #ffffff 1px solid;
+    border-left: #ffffff 1px solid;
+    border-bottom: #000000 1px solid;
+}
+.btn:hover{ 
+	background-color:#f4f4f4;
+	color:#000;
+	outline:none;
+	font-size:14px;
+}
+.btn:active{
+	background-color:#f4f4f4;
+	font-size:12px;
+	height:24px;
+	margin:0.5px 0;
+}
+
+
+
+/*输入框，选择框,长度设的是最小长度*/
+
+.in,select{
+	border:1px solid #336699;
+	padding:5px;
+	min-width:150px;
+}
+.in:hover{
+	background-color:#f4f4f4;
+}
